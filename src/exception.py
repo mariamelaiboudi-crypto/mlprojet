@@ -1,6 +1,6 @@
 import sys  # bibliothèque système utilisée pour obtenir les informations sur l'erreur (traceback)
-from logger import logger
-import logging
+from src.logger import logging
+
 # Fonction qui construit un message d'erreur détaillé
 def error_message_detail(error, error_details: sys):
     # exc_info() retourne : (type, valeur, traceback)
@@ -42,10 +42,4 @@ class CustomException(Exception):
     
 
 
-if __name__=='__main__':
-     
-     try :
-         a=1/0
-     except Exception as e:
-         logging.info('divisio zero')
-         raise CustomException(e,sys)
+
